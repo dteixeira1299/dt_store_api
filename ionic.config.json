@@ -1,0 +1,7 @@
+{
+  "name": "dt_store_api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
