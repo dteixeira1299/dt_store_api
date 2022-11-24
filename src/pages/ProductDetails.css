@@ -1,0 +1,39 @@
+ion-item {
+    --border-color: auto;
+}
+
+ion-title {
+    color: white;
+}
+
+.image {
+    width: 700px;
+    height: auto;
+}
+
+.ion-float-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ion-float-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ion-float-center {
+    display: flex;
+    justify-content: center;
+}
+
+.ion-title-desc{
+    margin-top: 50px;
+}
+
+.ion-title-spec{
+    margin-top: 50px;
+}
+
+ion-list{
+    margin-bottom: 200px;
+}

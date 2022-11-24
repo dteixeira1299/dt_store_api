@@ -8,7 +8,7 @@ export class StoreService {
   // search functions here
 
   searchData(title: string):Promise<any> {
-    return axios({url: `${this.url}v1/products(search=${encodeURI(title)})?format=json&show=sku,name,salePrice&apiKey=${this.apiKey}`, method: 'get'}).then(results => {
+    return axios({url: `${this.url}v1/products(search=${encodeURI(title)})?format=json&show=sku,name,salePrice,thumbnailImage&apiKey=${this.apiKey}`, method: 'get'}).then(results => {
       console.log(results);
       return results.data;
     });

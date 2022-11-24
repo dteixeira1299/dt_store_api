@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList,IonItem, IonButton, IonSearchbar, IonThumbnail } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList,IonItem, IonButton, IonSearchbar, IonImg } from '@ionic/react';
 import React from 'react';
 import './Products.css';
 import { StoreService } from '../services/store.service';
@@ -6,7 +6,7 @@ import { StoreService } from '../services/store.service';
 const Products: React.FC = () => {
 
   const [titleSearch, setTitleSearch] = React.useState('');
-  const [products, setProducts] = React.useState([{ sku: "", name: "", salePrice: "" }]);
+  const [products, setProducts] = React.useState([{ sku: "", name: "", salePrice: "",thumbnailImage:"" }]);
   const items: any[] = [];  
 
   React.useEffect(() => {
@@ -39,6 +39,7 @@ const Products: React.FC = () => {
             products.map(a => {
               return (
                 <IonItem>
+                  <IonImg src={a['thumbnailImage']} /> 
                   {a['name']}
                   <IonButton href={'products/'+a['sku']} color="primary" slot="end">Details</IonButton>
                 </IonItem>
